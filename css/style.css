@@ -1,0 +1,143 @@
+body, html{
+    height: 100%;
+    font-size: 16px;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.8em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #666;
+}
+
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.3)
+}
+
+.nav h3{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-left: 10px;
+    letter-spacing: 2px;
+}
+
+.spacer{
+    flex: 1;
+}
+
+.anchors{
+    padding: 20px 8px;
+}
+
+.anchors .icon{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 20px 15px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a:hover{
+    background: rgba(0, 0, 0, 0.5)
+}
+
+a:active{
+    background: (255, 255, 255, 0.5);
+    color: green;
+}
+
+.pimg1, .pimg2, .pimg3{
+    position: relative;
+    opacity: 0.80;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*this code adds the parallax effect to the website, if you change it to scroll it will go back to normal*/
+    background-attachment: fixed;
+}
+
+.pimg1{
+    background-image: url(../imgs/architecture-buildings-city-548084.jpg);
+    min-height: 100%;
+}
+.pimg2{
+    background-image: url(../imgs/city-dark-lights-9044.jpg);
+    min-height: 400px;
+}
+.pimg3{
+    background-image: url(../imgs/bangkok-buildings-cars-708764.jpg);
+    min-height: 400px;
+}
+
+.section{
+    text-align: center;
+    padding: 50px 80px; 
+}
+
+.section-light{
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark{
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext{
+    font-size: 27px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 8px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.ptext .border{
+    padding: 20px;
+    background-color: #111;
+    color: #fff;
+}
+
+.ptext .borderTrans{
+    background-color: transparent;
+}
+
+@media ( max-width: 568px){
+    .pimg1, .pimg2, .pimg3{
+        background-attachment: scroll;
+    }
+
+    .anchors a{
+        display: none;
+    }
+    .anchors .icon{
+        display: block;
+    }
+}
+
+@media ( max-width: 568px){
+    .anchors.responsive{
+        position: relative;
+    }
+
+    .anchors.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+    .anchors.responsive a {
+            display: block;
+            text-align: right;
+    }
+}
